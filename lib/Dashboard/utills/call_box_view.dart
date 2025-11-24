@@ -19,7 +19,7 @@ class _CallBoxViewState extends State<CallBoxView> {
               "https://upload.wikimedia.org/wikipedia/commons/0/06/Nissan_Skyline_GT-R_R34_V_Spec_II.jpg",
             ),
           ),
-          SizedBox(width: 8),
+          SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
