@@ -29,9 +29,9 @@ class _CallBoxViewState extends State<CallBoxView> {
                   Text(
                     "Rohan",
                     style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      color: Colors.red,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
                     ),
                   ),
                   Row(

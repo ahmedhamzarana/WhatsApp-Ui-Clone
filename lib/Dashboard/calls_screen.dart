@@ -108,13 +108,18 @@ class _CallsScreenState extends State<CallsScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Recent",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      children: [
+                        SizedBox(width: 10),
+                        Text(
+                          "Recent",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
                     CallBoxView(),
                   ],

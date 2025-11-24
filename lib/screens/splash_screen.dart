@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
 import 'package:whatsapp/screens/sign_Screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(color: Colors.white60),
+        decoration: BoxDecoration(color: AppColors.backgroundcolor),
         child: Center(
           child: SizedBox(
             height: 100,
