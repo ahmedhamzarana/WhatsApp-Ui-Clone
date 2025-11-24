@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
 import 'package:whatsapp/screens/dashboard_screen.dart';
+import 'package:flutter/material.dart';
 
 class SignScreen extends StatefulWidget {
   const SignScreen({super.key});
@@ -22,7 +23,7 @@ class _SignScreenState extends State<SignScreen> {
             Text(
               "Welcome Back",
               style: TextStyle(
-                color: Colors.lightGreen,
+                color: AppColors.primarycolor,
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
@@ -53,7 +54,7 @@ class _SignScreenState extends State<SignScreen> {
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green,
+                      backgroundColor: AppColors.primarycolor,
                     ),
                     onPressed: () {
                       Navigator.pushReplacement(
@@ -66,6 +67,7 @@ class _SignScreenState extends State<SignScreen> {
                     child: Text("Next", style: TextStyle(color: Colors.white)),
                   ),
                 ],
+                
               ),
             ),
           ],

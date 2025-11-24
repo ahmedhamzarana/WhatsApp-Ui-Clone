@@ -3,6 +3,7 @@ import 'package:whatsapp/Dashboard/calls_screen.dart';
 import 'package:whatsapp/Dashboard/chat_screen.dart';
 import 'package:whatsapp/Dashboard/cummuniti_screen.dart';
 import 'package:whatsapp/Dashboard/update_screen.dart';
+import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -17,48 +18,40 @@ class _DashboardScreenState extends State<DashboardScreen> {
     ChatScreen(),
     UpdateScreen(),
     CummunitiScreen(),
-    CallsScreen()
+    CallsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white70,
-        title: Text(
-          "WhatsApp",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        leading: Icon(Icons.camera),
-      ),
       body: _dashboardScreens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        selectedItemColor: Colors.green.shade500,
+        backgroundColor: AppColors.backgroundcolor,
+        selectedItemColor: AppColors.primarycolor,
         unselectedItemColor: Colors.black54,
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) {
-            setState(() {
-          _currentIndex = index;
-              
-            });
+          setState(() {
+            _currentIndex = index;
+          });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: "Chats"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.messenger_sharp),
+            icon: Icon(Icons.chat_outlined),
+            label: "Chats",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.circle_notifications_outlined),
             label: "Updates",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Cummunities",
+            icon: Icon(Icons.groups_2_outlined),
+            label: "Communities",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.call_outlined),
+            label: "Calls",
+          ),
         ],
       ),
     );

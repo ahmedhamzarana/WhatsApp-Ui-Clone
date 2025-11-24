@@ -29,8 +29,8 @@ class _SplashScreenState extends State<SplashScreen> {
         decoration: BoxDecoration(color: Colors.white60),
         child: Center(
           child: SizedBox(
-            height: 150,
-            width: 150,
+            height: 100,
+            width: 100,
             child: Image.asset("assets/Whatsapp-Logo.png"),
           ),
         ),
