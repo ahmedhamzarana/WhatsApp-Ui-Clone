@@ -13,11 +13,11 @@ class _ChatScreenState extends State<ChatScreen> {
   List<Map<String, String>> mycontact = [
     {
       "imgurl":
-          "https://media.licdn.com/dms/image/v2/D4E03AQG2UjPoyRyQJw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691323841878?e=2147483647&v=beta&t=a5yn15e7K7xzlRmiptWgO36VgQqvf_RIN1RqjOCJ0x8",
-      "name": "Hamza",
+          "https://upload.wikimedia.org/wikipedia/commons/0/06/Nissan_Skyline_GT-R_R34_V_Spec_II.jpg",
+      "name": "Rohan",
       "message": "Kaha hu ?",
       "time": "yesterday",
-      "count": "12",
+      "count": "1",
     },
   ];
   @override
@@ -30,7 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
           "WhatsApp",
           style: TextStyle(
             color: AppColors.primarycolor,
-            fontSize: 22,
+            fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -51,30 +51,38 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Ask Meta Ai or Search",
-                labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
-                prefixIcon: Icon(Icons.search),
+      body: Container(
+        color: AppColors.backgroundcolor,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 8,
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "Ask Meta Ai or Search",
+                  labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
+                  prefixIcon: Icon(Icons.search),
+                ),
               ),
             ),
-          ),
 
-          ListView.builder(
-            itemCount: mycontact.length,
-            itemBuilder: (context, index) => ChatBoxView(
-              imgurl: mycontact[0]["imgurl"].toString(),
-              name: mycontact[0]["name"].toString(),
-              message: mycontact[0]["message"].toString(),
-              time: mycontact[0]["time"].toString(),
-              count: mycontact[0]["count"].toString(),
+            Expanded(
+              child: ListView.builder(
+                itemCount: mycontact.length,
+                itemBuilder: (context, index) => ChatBoxView(
+                  imgurl: mycontact[0]["imgurl"].toString(),
+                  name: mycontact[0]["name"].toString(),
+                  message: mycontact[0]["message"].toString(),
+                  time: mycontact[0]["time"].toString(),
+                  count: mycontact[0]["count"].toString(),
+                ),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

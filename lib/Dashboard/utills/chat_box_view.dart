@@ -8,7 +8,8 @@ class ChatBoxView extends StatefulWidget {
   final String time;
   final String count;
 
-  const ChatBoxView({super.key, 
+  const ChatBoxView({
+    super.key,
     required this.imgurl,
     required this.name,
     required this.message,

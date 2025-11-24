@@ -22,11 +22,7 @@ class _CummunitiScreenState extends State<CummunitiScreen> {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 10),
-            child: IconButton(
-              onPressed: () {
-              },
-              icon: Icon(Icons.more_vert),
-            ),
+            child: IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
           ),
         ],
       ),
