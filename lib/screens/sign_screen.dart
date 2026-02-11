@@ -1,5 +1,5 @@
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
-import 'package:whatsapp/screens/dashboard_screen.dart';
+import 'package:whatsapp/utils/app_routes.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SignScreen extends StatefulWidget {
@@ -57,17 +57,11 @@ class _SignScreenState extends State<SignScreen> {
                       backgroundColor: AppColors.primarycolor,
                     ),
                     onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DashboardScreen(),
-                        ),
-                      );
+                      Navigator.pushNamed(context, AppRoutes.appmainscreen);
                     },
                     child: Text("Next", style: TextStyle(color: Colors.white)),
                   ),
                 ],
-                
               ),
             ),
           ],

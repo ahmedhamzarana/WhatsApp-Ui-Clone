@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 
 class UpdateScreen extends StatefulWidget {
   const UpdateScreen({super.key});

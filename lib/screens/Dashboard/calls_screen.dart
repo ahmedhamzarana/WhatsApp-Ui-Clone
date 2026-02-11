@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Dashboard/utills/call_box_view.dart';
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
+import 'package:whatsapp/widget/call_box_view.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 
 class CallsScreen extends StatefulWidget {
   const CallsScreen({super.key});

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 import 'package:whatsapp/screens/sign_Screen.dart';
 
 class SplashScreen extends StatefulWidget {

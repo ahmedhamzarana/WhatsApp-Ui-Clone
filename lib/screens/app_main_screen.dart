@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Dashboard/calls_screen.dart';
-import 'package:whatsapp/Dashboard/chat_screen.dart';
-import 'package:whatsapp/Dashboard/cummuniti_screen.dart';
-import 'package:whatsapp/Dashboard/update_screen.dart';
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
+import 'package:whatsapp/screens/Dashboard/calls_screen.dart';
+import 'package:whatsapp/screens/Dashboard/chat_screen.dart';
+import 'package:whatsapp/screens/Dashboard/cummuniti_screen.dart';
+import 'package:whatsapp/screens/Dashboard/update_screen.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class AppMainScreen extends StatefulWidget {
+  const AppMainScreen({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<AppMainScreen> createState() => _StateAppMainScreen();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _StateAppMainScreen extends State<AppMainScreen> {
   int _currentIndex = 0;
   final List<Widget> _dashboardScreens = [
     ChatScreen(),

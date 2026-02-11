@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/Dashboard/utills/chat_box_view.dart';
-import 'package:whatsapp/Dashboard/utills/custom_widget.dart';
+import 'package:whatsapp/widget/chat_box_view.dart';
+import 'package:whatsapp/utils/app_colors.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
