@@ -1,6 +1,6 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color backgroundcolor = Color(0xFFFFFFFF);
-  static const Color primarycolor =Color(0xFF25D366) ;
+  static const Color primarycolor = Colors.green;
 }

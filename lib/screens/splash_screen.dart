@@ -1,30 +1,14 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsapp/providers/splash_provider.dart';
 import 'package:whatsapp/utils/app_colors.dart';
-import 'package:whatsapp/screens/sign_Screen.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    Timer(
-      Duration(seconds: 2),
-      () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => SignScreen()),
-      ),
-    );
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    Provider.of<SplashProvider>(context).splashTimer(context);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(color: AppColors.backgroundcolor),

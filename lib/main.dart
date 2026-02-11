@@ -4,6 +4,7 @@ import 'package:whatsapp/utils/app_routes.dart';
 import 'package:whatsapp/providers/splash_provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   MultiProvider(providers: [
     ChangeNotifierProvider(create: (context)=>SplashProvider())
 

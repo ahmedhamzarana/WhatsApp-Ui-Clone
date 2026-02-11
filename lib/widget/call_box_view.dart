@@ -1,62 +1,84 @@
 import 'package:flutter/material.dart';
 
-class CallBoxView extends StatefulWidget {
-  const CallBoxView({super.key});
+class CallBoxView extends StatelessWidget {
+  final String imgurl;
+  final String name;
+  final String time;
+  final String type; // "received", "made", "missed"
 
-  @override
-  State<CallBoxView> createState() => _CallBoxViewState();
-}
+  const CallBoxView({
+    super.key,
+    required this.imgurl,
+    required this.name,
+    required this.time,
+    required this.type,
+  });
 
-class _CallBoxViewState extends State<CallBoxView> {
   @override
   Widget build(BuildContext context) {
+    // Determine icon and color based on call type
+    IconData callIcon;
+    Color iconColor;
+
+    switch (type) {
+      case "made":
+        callIcon = Icons.call_made;
+        iconColor = Colors.green;
+        break;
+      case "missed":
+        callIcon = Icons.call_missed;
+        iconColor = Colors.red;
+        break;
+      case "received":
+      default:
+        callIcon = Icons.call_received;
+        iconColor = Colors.blue;
+        break;
+    }
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8, vertical: 12),
       child: Row(
         children: [
           CircleAvatar(
-            backgroundImage: NetworkImage(
-              "https://upload.wikimedia.org/wikipedia/commons/0/06/Nissan_Skyline_GT-R_R34_V_Spec_II.jpg",
-            ),
+            radius: 25,
+            backgroundImage: NetworkImage(imgurl),
           ),
           SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Text(
+                name,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                ),
+              ),
+              Row(
                 children: [
-                  Text(
-                    "Rohan",
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
-                    ),
+                  Icon(
+                    callIcon,
+                    size: 16,
+                    color: iconColor,
                   ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.call_received_outlined,
-                        size: 15,
-                        color: Colors.red,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        "43 miuntes ago",
-                        style: TextStyle(color: Colors.black, fontSize: 12),
-                      ),
-                    ],
+                  SizedBox(width: 5),
+                  Text(
+                    time,
+                    style: TextStyle(color: Colors.grey[700], fontSize: 12),
                   ),
                 ],
               ),
             ],
           ),
           Spacer(),
-          Column(
-            children: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.call_outlined)),
-            ],
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.call_outlined,
+              color: Colors.green,
+            ),
           ),
         ],
       ),
