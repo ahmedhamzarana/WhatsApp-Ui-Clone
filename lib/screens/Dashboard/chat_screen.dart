@@ -50,25 +50,21 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(55),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Ask Meta Ai or Search",
+              labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
+              prefixIcon: Icon(Icons.search),
+            ),
+          ),
+        ),
       ),
       body: Container(
         color: AppColors.backgroundcolor,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 8,
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: "Ask Meta Ai or Search",
-                  labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
-                  prefixIcon: Icon(Icons.search),
-                ),
-              ),
-            ),
-
             Expanded(
               child: ListView.builder(
                 itemCount: mycontact.length,
